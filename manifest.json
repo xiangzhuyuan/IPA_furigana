@@ -1,0 +1,42 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "lib/jquery-2.0.2.js", "lib/sprintf.min.js", "lib/igo.min.js", "lib/zip.min.js", "lib/wanakana.min.js", "background.js", "lib/diff.js" ]
+   },
+   "commands": {
+      "toggle-furigana": {
+         "description": "Toggle furigana",
+         "suggested_key": {
+            "default": "Alt+Shift+F",
+            "mac": "Alt+Shift+F"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "kanji_content_detect.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_manifestExtDescription__",
+   "icons": {
+      "128": "img/furigana_active.png",
+      "16": "img/furigana_active.png",
+      "256": "img/furigana_active.png",
+      "32": "img/furigana_active.png",
+      "48": "img/furigana_active_48.png",
+      "96": "img/furigana_active_96.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsol0s2J4b68RC7Sz6eP5yN4LTIJZTMUO9Df+5KxgiRu2amcsMCib6Q8dD36+zqanIgTzBQDNhWl4EPJZ2/qIY8kfi3UudI+W4h0x9nxPblq3u4h5HFmAep/r8kBQ4AjLW925pygKWvag+6WzSu1W0N9quuPXtH2Dol0D+jEStPwIXiLDgRifMfl94TRnHDylKycbXq9vZqu39vHqL6wRRCGIoWpEaemvsrxO6DU39u2QTS4URTn5HGSXccs7jwFiM584U8YKHFYdavNHija17zZw0AWXqHBKqgnOy5F6CnlGoqYxWlPFVq0CfQEjnmvKf9/OpI19qj6DNFWOhaUrnQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_manifestExtName__",
+   "options_page": "user_cp/options.html",
+   "page_action": {
+      "default_icon": {
+         "38": "img/icons/furigana_inactive_76.png"
+      },
+      "default_title": "Toggle furigana"
+   },
+   "permissions": [ "http://*/*", "https://*/*", "activeTab", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.12"
+}
